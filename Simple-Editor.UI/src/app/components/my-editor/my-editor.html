@@ -1,0 +1,21 @@
+<p>my-editor works!</p>
+
+@if (editor) {
+
+<button (click)="check()" class="p-2 rounded-sm bg-cyan-500 m-2">Get value</button>
+
+<app-my-editor-menu [editor]="editor"></app-my-editor-menu>
+
+<tiptap-editor [editor]="editor" [(ngModel)]="value"></tiptap-editor>
+
+<!-- <tiptap-floating-menu [editor]="editor">
+  Anything that should be rendered inside floating menu
+</tiptap-floating-menu> -->
+
+<!-- <tiptap-bubble-menu [editor]="editor"> -->
+<!-- Anything that should be rendered inside bubble menu -->
+<!-- </tiptap-bubble-menu> -->
+
+} @else {
+<div>Loading editor...</div>
+}

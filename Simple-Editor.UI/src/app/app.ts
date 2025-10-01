@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MyEditor } from "./components/my-editor/my-editor";
 
 interface User {
   firstName: string;
@@ -10,7 +11,7 @@ interface User {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MyEditor],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

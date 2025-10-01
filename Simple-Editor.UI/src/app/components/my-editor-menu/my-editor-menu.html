@@ -1,0 +1,35 @@
+<div class="p-1 flex">
+  <button
+    id="bold"
+    class="h-7 w-7 flex items-center justify-center border-none rounded-md hover:text-white hover:bg-black"
+    (click)="editor().chain().focus().toggleBold().run()"
+    [ngClass]="{ 'text-white bg-black': this.editor().isActive('bold') }"
+  >
+    <i class="material-icons">format_bold</i>
+  </button>
+  <button
+    id="italic"
+    class="ml-1 h-7 w-7 flex items-center justify-center border-none rounded-md hover:text-white hover:bg-black"
+    (click)="editor().chain().focus().toggleItalic().run()"
+    [ngClass]="{ 'text-white bg-black': this.editor().isActive('italic') }"
+  >
+    <i class="material-icons">format_italic</i>
+  </button>
+  <button
+    id="blockquote"
+    class="ml-1 h-7 w-7 flex items-center justify-center border-none rounded-md hover:text-white hover:bg-black"
+    (click)="editor().chain().focus().toggleBlockquote().run()"
+    [ngClass]="{ 'text-white bg-black': this.editor().isActive('blockquote') }"
+  >
+    <i class="material-icons">format_quote</i>
+  </button>
+
+  <button
+    id="strikethrough"
+    class="ml-1 h-7 w-7 flex items-center justify-center border-none rounded-md hover:text-white hover:bg-black"
+    (click)="editor().chain().focus().toggleStrike().run()"
+    [ngClass]="{ 'text-white bg-black': this.editor().isActive('strikethrough') }"
+  >
+    <i class="material-icons">strikethrough_s</i>
+  </button>
+</div>
